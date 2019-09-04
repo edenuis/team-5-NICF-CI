@@ -1,9 +1,17 @@
-
 public class Task {
 	private String description = null;
 	private boolean isComplete = false;
+	private String category = null;
 	
 	
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
 	public Task(String description) {
 		super();
 		this.description = description;
@@ -13,6 +21,13 @@ public class Task {
 		super();
 		this.description = description;
 		this.isComplete = isComplete;
+	}
+	
+	public Task(String description, boolean isComplete, String category) {
+		super();
+		this.description = description;
+		this.isComplete = isComplete;
+		this.category = category;
 	}
 	
 	public String getDescription() {
@@ -27,5 +42,6 @@ public class Task {
 	public void setComplete(boolean isComplete) {
 		this.isComplete = isComplete;
 	}
+	
 
 }
