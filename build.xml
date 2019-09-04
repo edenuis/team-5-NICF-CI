@@ -60,11 +60,11 @@
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
     <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
         <copy todir="${ant.library.dir}">
-            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+            <fileset dir="$../jar_files" includes="org.eclipse.jdt.core_*.jar"/>
         </copy>
         <unzip dest="${ant.library.dir}">
             <patternset includes="jdtCompilerAdapter.jar"/>
-            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+            <fileset dir="$../jar_files" includes="org.eclipse.jdt.core_*.jar"/>
         </unzip>
     </target>
     <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
