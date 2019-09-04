@@ -18,5 +18,7 @@
 	<classpathentry kind="lib" path="jar_files/org.junit.vintage.engine_5.4.0.v20190212-2109.jar"/>
 	<classpathentry kind="lib" path="jar_files/org.opentest4j_1.1.1.v20190212-2109.jar"/>
 	<classpathentry kind="lib" path="jar_files/org.junit_4.12.0.v201504281640/junit.jar"/>
+	<classpathentry kind="lib" path="jar_files/org.eclipse.jdt.core_3.18.0.v20190522-0428.jar"/>
+	<classpathentry kind="lib" path="jar_files/org.eclipse.jdt.core.manipulation_1.11.200.v20190520-0718.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
