@@ -11,20 +11,20 @@
     <property name="target" value="1.8"/>
     <property name="source" value="1.8"/>
     <path id="JUnit 5.libraryclasspath">
-        <pathelement location="$../jar_files/org.junit.jupiter.api_5.4.0.v20190212-2109.jar"/>
-        <pathelement location="$../jar_files/org.junit.jupiter.engine_5.4.0.v20190212-2109.jar"/>
-        <pathelement location="$../jar_files/org.junit.jupiter.migrationsupport_5.4.0.v20190212-2109.jar"/>
-        <pathelement location="$../jar_files/org.junit.jupiter.params_5.4.0.v20190212-2109.jar"/>
-        <pathelement location="$../jar_files/org.junit.platform.commons_1.4.0.v20190212-2109.jar"/>
-        <pathelement location="$../jar_files/org.junit.platform.engine_1.4.0.v20190212-2109.jar"/>
-        <pathelement location="$../jar_files/org.junit.platform.launcher_1.4.0.v20190212-2109.jar"/>
-        <pathelement location="$../jar_files/org.junit.platform.runner_1.4.0.v20190212-2109.jar"/>
-        <pathelement location="$../jar_files/org.junit.platform.suite.api_1.4.0.v20190212-2109.jar"/>
-        <pathelement location="$../jar_files/org.junit.vintage.engine_5.4.0.v20190212-2109.jar"/>
-        <pathelement location="$../jar_files/org.opentest4j_1.1.1.v20190212-2109.jar"/>
-        <pathelement location="$../jar_files/org.apiguardian_1.0.0.v20190212-2109.jar"/>
-        <pathelement location="$../jar_files/org.junit_4.12.0.v201504281640/junit.jar"/>
-        <pathelement location="$../jar_files/org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit.jupiter.api_5.4.0.v20190212-2109.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit.jupiter.engine_5.4.0.v20190212-2109.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit.jupiter.migrationsupport_5.4.0.v20190212-2109.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit.jupiter.params_5.4.0.v20190212-2109.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit.platform.commons_1.4.0.v20190212-2109.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit.platform.engine_1.4.0.v20190212-2109.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit.platform.launcher_1.4.0.v20190212-2109.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit.platform.runner_1.4.0.v20190212-2109.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit.platform.suite.api_1.4.0.v20190212-2109.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit.vintage.engine_5.4.0.v20190212-2109.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.opentest4j_1.1.1.v20190212-2109.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.apiguardian_1.0.0.v20190212-2109.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit_4.12.0.v201504281640/junit.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
     </path>
     <path id="ToDoList Workshop.classpath">
         <pathelement location="bin"/>
@@ -60,11 +60,11 @@
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
     <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
         <copy todir="${ant.library.dir}">
-            <fileset dir="$../jar_files" includes="org.eclipse.jdt.core_*.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
         </copy>
         <unzip dest="${ant.library.dir}">
             <patternset includes="jdtCompilerAdapter.jar"/>
-            <fileset dir="$../jar_files" includes="org.eclipse.jdt.core_*.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
         </unzip>
     </target>
     <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
