@@ -49,16 +49,6 @@ public class ToDoListTest extends TestCase{
 		assertTrue(tdl.isEmpty());
 	}
 	@Test
-	public void testGetCompletedTasks() {
-		ToDoList tdl = new ToDoList();
-		assertTrue(tdl.isEmpty());
-		tdl.addTask(task2);
-		assertFalse(tdl.isEmpty());
-		ArrayList<Task> arr = new ArrayList<Task>();
-		arr.add(task2);
-		assertSame(tdl.getCompletedTasks(), arr);
-	}
-	@Test
 	public void testCompleteTask() {
 		ToDoList tdl = new ToDoList();
 		assertTrue(tdl.isEmpty());
